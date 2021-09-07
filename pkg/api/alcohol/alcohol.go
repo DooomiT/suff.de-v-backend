@@ -27,7 +27,7 @@ func GetAAlcohol(w http.ResponseWriter, r *http.Request) {
 	alcoholID := chi.URLParam(r, "alcoholID")
 	//TODO: implement
 	alcohol := Alcohol{
-		ID: alcoholID
+		ID: alcoholID,
 		Type:  "Hochprozentiges",
 		Description: "Mehr als 30% oder so",
 		Image:  "No Image yet ...",
@@ -53,13 +53,13 @@ func GetAllAlcohols(w http.ResponseWriter, r *http.Request) {
 	//TODO: implement
 	alcohols := []Alcohol{
 		{
-			ID: alcoholID
+			ID: "001",
 			Type:  "Hochprozentiges",
 			Description: "Mehr als 30% oder so",
 			Image:  "No Image yet ...",
 		},
 		{
-			ID: alcoholID
+			ID: "002",
 			Type:  "Likör",
 			Description: "Weniger als 30% oder so",
 			Image:  "No Image yet ...",

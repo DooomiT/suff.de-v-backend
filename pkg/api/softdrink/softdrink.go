@@ -27,7 +27,7 @@ func GetASoftdrink(w http.ResponseWriter, r *http.Request) {
 	softdrinkID := chi.URLParam(r, "softdrinkID")
 	//TODO: implement
 	softdrink := Softdrink{
-		ID: softdrinkID
+		ID: softdrinkID,
 		Type:  "Cola",
 		Description: "Mehr als 30% oder so",
 		Image:  "No Image yet ...",
@@ -53,13 +53,13 @@ func GetAllSoftdrinks(w http.ResponseWriter, r *http.Request) {
 	//TODO: implement
 	softdrinks := []Softdrink{
 		{
-			ID: softdrinkID
+			ID: "001",
 			Type:  "Cola",
 			Description: "Mehr als 30% oder so",
 			Image:  "No Image yet ...",
 		},
 		{
-			ID: softdrinkID
+			ID: "002",
 			Type:  "Fanta",
 			Description: "Weniger als 30% oder so",
 			Image:  "No Image yet ...",

@@ -6,7 +6,10 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"
-	"github.com/DooomiT/suff.de-v-backend/pkg/api/*"
+	"github.com/DooomiT/suff.de-v-backend/pkg/api/alcohol"
+	"github.com/DooomiT/suff.de-v-backend/pkg/api/snack"
+	"github.com/DooomiT/suff.de-v-backend/pkg/api/softdrink"
+
 )
 
 func Routes() *chi.Mux {
@@ -19,9 +22,9 @@ func Routes() *chi.Mux {
 	)
 
 	router.Route("/v1", func(r chi.Router) {
-		r.Mount("/api/alcohol", albums.Routes())
-		r.Mount("/api/snack", albums.Routes())
-		r.Mount("/api/softdrink", albums.Routes())
+		r.Mount("/api/alcohol", alcohol.Routes())
+		r.Mount("/api/snack", snack.Routes())
+		r.Mount("/api/softdrink", softdrink.Routes())
 
 	})
 

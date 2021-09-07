@@ -27,7 +27,7 @@ func GetASnack(w http.ResponseWriter, r *http.Request) {
 	snackID := chi.URLParam(r, "snackID")
 	//TODO: implement
 	snack := Snack{
-		ID: snackID
+		ID: snackID,
 		Type:  "Choclate",
 		Description: "Mehr als 30% oder so",
 		Image:  "No Image yet ...",
@@ -53,13 +53,13 @@ func GetAllSnacks(w http.ResponseWriter, r *http.Request) {
 	//TODO: implement
 	snacks := []Snack{
 		{
-			ID: snackID
+			ID: "001",
 			Type:  "Choclate",
 			Description: "Mehr als 30% oder so",
 			Image:  "No Image yet ...",
 		},
 		{
-			ID: snackID
+			ID: "002",
 			Type:  "Cookie",
 			Description: "Weniger als 30% oder so",
 			Image:  "No Image yet ...",
