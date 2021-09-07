@@ -11,7 +11,7 @@
     "settings": {
         "go.useLanguageServer": true
     },
-    "postCreateCommand": "go mod download",
+    "postCreateCommand": "sudo go mod download",
     "runArgs": [
         "-u",
         "vscode",

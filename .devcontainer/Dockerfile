@@ -1,7 +1,4 @@
-ARG GO_VERSION=1.13
-ARG ALPINE_VERSION=3.10
-
-FROM golang:${GO_VERSION}-alpine${ALPINE_VERSION}
+FROM golang:1.17.0-alpine
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=1000
@@ -22,11 +19,8 @@ RUN sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/m
 ENV ENV="/home/$USERNAME/.ashrc" \
     ZSH=/home/$USERNAME/.oh-my-zsh \
     EDITOR=vi \
-    LANG=en_US.UTF-8
-    GOPRIVATE=github.com/DooomiT/suff.de-v-backend
+    LANG=en_US.UTF-8 
 RUN printf 'ZSH_THEME="robbyrussell"\nENABLE_CORRECTION="false"\nplugins=(git copyfile extract colorize dotenv encode64 golang)\nsource $ZSH/oh-my-zsh.sh' > "/home/$USERNAME/.zshrc"
 RUN echo "exec `which zsh`" > "/home/$USERNAME/.ashrc"
 USER root
-RUN git config --global url."git@github.com:".insteadOf "https://github.com/"
-RUN echo "machine github.com login DooomiT password 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" >> $HOME/.netrc
 

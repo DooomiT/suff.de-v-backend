@@ -1,9 +1,9 @@
-package todo
+package albums
 
 import (
 	"net/http"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
 )
 
@@ -52,5 +52,5 @@ func GetAllAlbums(w http.ResponseWriter, r *http.Request) {
 			Body:  "Heloo world from planet earth",
 		},
 	}
-	render.JSON(w, r, todos) // A chi router helper for serializing and returning json
+	render.JSON(w, r, albums) // A chi router helper for serializing and returning json
 }
