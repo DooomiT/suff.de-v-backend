@@ -1,7 +1,0 @@
-{
-    "name": "PostgresDB",
-    "dockerComposeFile": ["../../docker-compose.yml"],
-    "service": "db",
-    "workspaceFolder": "/workspace",
-    "shutdownAction": "none"
-}
