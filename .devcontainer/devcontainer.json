@@ -1,6 +1,7 @@
 {
-    "name": "Your project Dev",
-    "dockerFile": "Dockerfile",
+    "name": "suff.de-v-backend",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "suff.de-v-backend",
     "forwardPorts": [8000],
     "extensions": [
         "ms-vscode.go",
@@ -12,13 +13,4 @@
         "go.useLanguageServer": true
     },
     "postCreateCommand": "sudo go mod download",
-    "runArgs": [
-        "-u",
-        "vscode",
-        "--cap-add=SYS_PTRACE",
-        "--security-opt",
-        "seccomp=unconfined",
-        // map SSH keys for Git
-        "-v", "${env:HOME}/.ssh:/home/vscode/.ssh:ro"
-    ]
 }

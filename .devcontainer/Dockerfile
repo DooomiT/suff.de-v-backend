@@ -16,10 +16,10 @@ RUN GO111MODULE=on go get golang.org/x/tools/gopls
 # Setup shell
 USER $USERNAME
 RUN sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended &> /dev/null
-ENV ENV="/home/$USERNAME/.ashrc" \
+ENV ENV="/home/$USERNAME/.bashrc" \
     ZSH=/home/$USERNAME/.oh-my-zsh \
     EDITOR=vi \
-    LANG=en_US.UTF-8 
+    LANG=en_US.UTF-8
 RUN printf 'ZSH_THEME="robbyrussell"\nENABLE_CORRECTION="false"\nplugins=(git copyfile extract colorize dotenv encode64 golang)\nsource $ZSH/oh-my-zsh.sh' > "/home/$USERNAME/.zshrc"
 RUN echo "exec `which zsh`" > "/home/$USERNAME/.ashrc"
 USER root
