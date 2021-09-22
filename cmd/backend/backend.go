@@ -17,10 +17,10 @@ import (
 )
 
 const (
-	USERNAME = "test"
-	PASSWORD = "test"
+	USERNAME = "postgres"
+	PASSWORD = "2002"
 	HOST     = "localhost"
-	DBNAME   = "test"
+	DBNAME   = "testdb"
 	PORT     = 5432
 )
 
@@ -39,7 +39,7 @@ func main() {
 	var dbUser, dbPassword, dbName, dbHost string
 	var dbPort int
 	if local {
-		dbUser, dbPassword, dbName, dbHost, dbPort = USERNAME, PASSWORD, HOST, DBNAME, PORT
+		dbUser, dbPassword, dbHost, dbName, dbPort = USERNAME, PASSWORD, HOST, DBNAME, PORT
 	} else {
 		dbUser_env, dbPassword_env, dbName_env, dbHost_env, dbPort_env := getDatabaseEnv()
 		dbUser, dbPassword, dbName, dbHost = dbUser_env, dbPassword_env, dbName_env, dbHost_env
