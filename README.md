@@ -2,4 +2,4 @@
 
 ## API-Definition
 * Open Postman
-* Import suffde-v-postman-collection.json
+* Import suffde-v-postman-collection.json into your Workspace
