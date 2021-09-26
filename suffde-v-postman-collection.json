@@ -1,0 +1,427 @@
+{
+	"info": {
+		"_postman_id": "d211c69d-6b5f-40c1-b3da-0da50b3108f8",
+		"name": "suffde/v",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Details about a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user?id=13830446",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "13830446",
+							"description": "(Required) ID of the user"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Details about a user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=13830446",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13830446"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "x-next",
+							"value": "sint incididunt reprehenderit consequat ullamco",
+							"description": {
+								"content": "A link to the next page of responses",
+								"type": "text/plain"
+							}
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"id\": 7385912,\n \"name\": \"minim consequat\",\n \"tag\": \"reprehenderit adipisicing\"\n}"
+				},
+				{
+					"name": "unexpected error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user?id=13830446",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13830446"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"code\": -14409940,\n \"message\": \"ullamco pariatur ad ex\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Details about a Drink",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/drink?id=83261914",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"drink"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "83261914",
+							"description": "(Required) ID of the drink"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details about a Drink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/drink?name=adipisicing ipsum&category=adipisicing ipsum",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"drink"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "adipisicing ipsum",
+							"description": "(Required) Name of the drink"
+						},
+						{
+							"key": "category",
+							"value": "adipisicing ipsum",
+							"description": "(Required) Category of the drink"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of drinks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/drinks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"drinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details about a snack",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/snack?id=83261914",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"snack"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "83261914",
+							"description": "(Required) ID of the snack"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a Snack",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/snack?name=adipisicing ipsum&category=adipisicing ipsum",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"snack"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "adipisicing ipsum",
+							"description": "(Required) Name of the snack"
+						},
+						{
+							"key": "category",
+							"value": "adipisicing ipsum",
+							"description": "(Required) Category of the snack"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of drinks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/snacks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"snacks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details about a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/misc?id=83261914",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"misc"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "83261914",
+							"description": "(Required) ID of the misc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding a Misc",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/misc?name=adipisicing ipsum&category=adipisicing ipsum",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"misc"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "adipisicing ipsum",
+							"description": "(Required) Name of the misc"
+						},
+						{
+							"key": "category",
+							"value": "adipisicing ipsum",
+							"description": "(Required) Category of the misc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of drinks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/miscs",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"miscs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Details about Miscs",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/miscs",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"miscs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "x-next",
+							"value": "et aliqua culpa",
+							"description": {
+								"content": "A link to the next page of responses",
+								"type": "text/plain"
+							}
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"value\": \"reference #components/schemas/Misc not found in the OpenAPI spec\"\n },\n {\n  \"value\": \"reference #components/schemas/Misc not found in the OpenAPI spec\"\n }\n]"
+				},
+				{
+					"name": "unexpected error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: basic",
+								"key": "Authorization",
+								"value": "Basic <credentials>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/miscs",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"miscs"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"code\": -98573079,\n \"message\": \"aute est\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://suff.de/v1",
+			"type": "string"
+		}
+	]
+}
